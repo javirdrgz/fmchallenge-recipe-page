@@ -40,7 +40,7 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 This solution is part of my practice to become more familiar with the layout principles laid down by Heydon Pickering and Andy Bell in their book "Every layout". In this simple recipe page the only layout element used was the basic "stack" and "recursive stack" where you stack elements using flexbox and tweaking the spacing.
 
-Something I'm not convinced of is the solution I implemented to make the image full width in the mobile version. I wanted the image to be part of the article header element, but since the article had padding, that would apply to the image too. Therefore I added some CSS for the image to ignore the padding of it's parent element. I feel there has to be a better solution, so I'll be looking for it.
+Something I'm not convinced of is the solution I implemented to make the image full-width in the mobile version. I wanted the image to be part of the article header element, but since the article had padding, that padding also affected the image. Therefore, I added some CSS for the image to ignore the padding of its parent element. I believe there must be a better solution, so I'll be looking for it.
 
 ```css
 img {
