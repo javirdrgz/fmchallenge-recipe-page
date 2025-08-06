@@ -1,0 +1,195 @@
+/* ===== Typography ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+/* ===== RESET ===== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    min-height: 100vh;
+}
+
+
+/* ===== Variables ===== */
+
+:root {
+    /* Color variables */
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+
+    /* Font size variables */
+    --s0: 1rem;
+    --s1: 1.25rem;
+    --s2: 2rem;
+    --s3: 2.725rem;
+}
+
+
+
+
+/* ===== BASE STYLES ===== */
+
+body {
+    font-family: "Outfit", sans-serif;
+    background-color: var(--white);
+    color: var(--stone-600);
+    font-weight: 500;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--stone-100);
+}
+
+article {
+    padding: var(--s1);
+    background-color: var(--white)
+}
+
+h1 {
+    font-family: 'Young Serif', serif;
+    font-size: var(--s3);
+    color: var(--stone-900);
+    line-height: 1;
+}
+
+h2 {
+    font-family: 'Young Serif', serif;
+    font-size: var(--s2);
+    color: var(--brown-800);
+}
+
+h3 {
+    font-family: "Outfit", sans-serif;
+    color: var(--rose-800);
+    font-weight: bold;
+    font-size: var(--s1);
+}
+
+ul,
+ol {
+    padding-left: 0.5rem;
+    margin-inline-start: 1.5rem;
+}
+
+li::marker {
+    color: var(--brown-800);
+}
+
+li {
+    padding-left: 0.5rem;
+}
+
+strong {
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+}
+
+th,
+td {
+    padding: var(--s1);
+    text-align: left;
+    border-bottom: 1px solid var(--stone-150)
+}
+
+td {
+    color: var(--brown-800);
+    font-weight: 800;
+    padding-left: 0;
+}
+
+th {
+    padding-left: 2rem;
+}
+
+hr {
+    border: 1px solid var(--stone-150);
+}
+
+img {
+    /* ignore parent padding */
+    width: calc(100% + calc(2 * var(--s1)));
+    margin-left: calc(-1 * var(--s1));
+    margin-top: calc(-1 * var(--s1));
+    max-width: none;
+}
+
+
+
+/* ===== Layout ===== */
+.stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    --space: 1.5rem;
+}
+
+.stack *+* {
+    margin-top: var(--space);
+}
+
+ul.stack,
+ol.stack {
+    --space: 1rem;
+}
+
+.prep-time {
+    background-color: var(--rose-50);
+    padding: var(--s1);
+    border-radius: var(--s0);
+}
+
+.prep-time ul {
+    padding: 0 2rem;
+    margin-inline-start: .5rem;
+}
+
+.prep-time li::marker {
+    color: var(--rose-800)
+}
+
+@media (min-width: 720px) {
+    body {
+        padding: 2rem;
+    }
+
+    img {
+        border-radius: 10px;
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    article {
+        padding: 2rem;
+        border-radius: 20px;
+    }
+}
