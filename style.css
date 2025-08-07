@@ -182,7 +182,7 @@ ol.stack {
         padding: 2rem;
         max-width: 616px;
         border-radius: var(--s0);
-        margin: var(--s3) auto var(--s3) auto;
+        margin: 5rem auto 5rem auto;
     }
 
     img {
