@@ -48,7 +48,7 @@ body {
     --s2: 2rem;
     --s3: 2.725rem;
 
-    --recipe-max-w: 750px;
+    --recipe-max-w: 768px;
 }
 
 
@@ -177,9 +177,10 @@ ol.stack {
     color: var(--rose-800)
 }
 
-@media (min-width: 750px) {
+@media (min-width: 768px) {
     body {
         padding: 2rem;
+        max-width: 616px;
         border-radius: var(--s0);
         margin: var(--s3) auto var(--s3) auto;
     }
@@ -191,4 +192,10 @@ ol.stack {
         margin-top: 0;
     }
 
+}
+
+@media (min-width: 1024px) {
+    body {
+        max-width: 768px;
+    }
 }
