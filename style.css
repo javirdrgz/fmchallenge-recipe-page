@@ -47,6 +47,8 @@ body {
     --s1: 1.25rem;
     --s2: 2rem;
     --s3: 2.725rem;
+
+    --recipe-max-w: 750px;
 }
 
 
@@ -54,21 +56,20 @@ body {
 
 /* ===== BASE STYLES ===== */
 
+html {
+    background-color: var(--stone-100);
+}
+
 body {
     font-family: "Outfit", sans-serif;
     background-color: var(--white);
     color: var(--stone-600);
     font-weight: 500;
-    max-width: 720px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: var(--stone-100);
-}
-
-article {
+    max-width: var(--recipe-max-w);
     padding: var(--s1);
     background-color: var(--white)
 }
+
 
 h1 {
     font-family: 'Young Serif', serif;
@@ -176,20 +177,18 @@ ol.stack {
     color: var(--rose-800)
 }
 
-@media (min-width: 720px) {
+@media (min-width: 750px) {
     body {
         padding: 2rem;
+        border-radius: var(--s0);
+        margin: var(--s3) auto var(--s3) auto;
     }
 
     img {
-        border-radius: 10px;
+        border-radius: var(--s0);
         max-width: 100%;
         margin-left: 0;
         margin-top: 0;
     }
 
-    article {
-        padding: 2rem;
-        border-radius: 20px;
-    }
 }
